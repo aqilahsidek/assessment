@@ -97,4 +97,4 @@ function generateCalculatedTable() {
 }
 
 //Call the function
-readCSV('https://github.com/aqilahsidek/assessment/blob/51c6e0a2344169a13d134cdd667fddcdbe025946/Table_Input.csv');
+readCSV('https://raw.githubusercontent.com/aqilahsidek/assessment/51c6e0a2344169a13d134cdd667fddcdbe025946/Table_Input.csv');
