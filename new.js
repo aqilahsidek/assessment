@@ -97,4 +97,4 @@ function generateCalculatedTable() {
 }
 
 //Call the function
-readCSV('Table_input.csv');
+readCSV('Table_Input.csv');
