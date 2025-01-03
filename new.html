@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Extract Values from Table</title>
-    <style>
-        table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-        }
-        th, td {
-        border: 1px solid #ddd;
-        padding: 8px;
-        }
-        th {
-        background-color: #f4f4f4;
-        text-align: left;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CSV Table</title>
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f4f4f4;
+      text-align: left;
+    }
+  </style>
 </head>
 <body>
+  <h1>CSV Tables</h1>
+  <h2>Table 1: CSV Data</h2>
+  <table id="csvTable1"></table>
 
-    <h1>Table 1: Data from CSV File</h1>
-    <table id="csvTable1"></table>
+  <h2>Table 2: Calculated Values</h2>
+  <table id="table2">
+    <thead>
+      <tr>
+        <th>Category</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
 
-    <h1>Table 2: Processed Data Values</h1>
-    <table id="table2">
-        <thead>
-            <tr>
-                <th>Category</th>
-                <th>Value</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
-
-    <script>
-        // Fetch and read the CSV file
+  <script>
+// Fetch and read the CSV file
 async function readCSV(filePath) {
     const response = await fetch(filePath);
     //If fail, throw error
