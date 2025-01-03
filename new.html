@@ -6,23 +6,24 @@
     <title>Extract Values from Table</title>
     <style>
         table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        table, th, td {
-            border: 1px solid black;
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
         }
         th, td {
-            padding: 8px;
-            text-align: left;
+        border: 1px solid #ddd;
+        padding: 8px;
+        }
+        th {
+        background-color: #f4f4f4;
+        text-align: left;
         }
     </style>
 </head>
 <body>
 
     <h1>Table 1: Data from CSV File</h1>
-    <table id="table1"></table>
+    <table id="csvTable1"></table>
 
     <h1>Table 2: Processed Data Values</h1>
     <table id="table2">
