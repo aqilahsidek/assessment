@@ -15,7 +15,7 @@ async function readCSV(filePath) {
     const data = rows.slice(1);
 
     //Generate first table using headers and data that is extracted
-    generateTable('table1', headers, data);
+    generateTable('csvTable1', headers, data);
     
     //Delay second table to make sure first table is fully rendered 
     setTimeout(() => generateCalculatedTable(), 100); 
@@ -29,7 +29,7 @@ function generateTable(tableId, headers, data) {
     //Build header
     let headerRow = '<thead><tr>';
     headers.forEach(header => {
-        headerRow += <th>${header}</th>;
+        headerRow += `<th>${header}</th>`;
     });
     headerRow += '</tr></thead>';
     table.innerHTML = headerRow + '<tbody></tbody>';
@@ -41,7 +41,7 @@ function generateTable(tableId, headers, data) {
         let tableRow = '<tr>';
         //Add cell
         row.forEach(cell => {
-            tableRow += <td>${cell}</td>;
+            tableRow += `<td>${cell}</td>`;
         });
         tableRow += '</tr>';
         
@@ -53,7 +53,7 @@ function generateTable(tableId, headers, data) {
 //Extract values from Table 1 and generate Table 2
 function generateCalculatedTable() {
     //Select all rows in Table 1
-    const rows = document.querySelectorAll('#table1 tbody tr');
+    const rows = document.querySelectorAll('#csvTable1 tbody tr');
     //Get the value from a specific row
     const getValue = index => {
         //Access the second cell in the row
